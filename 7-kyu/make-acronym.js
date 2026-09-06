@@ -29,6 +29,7 @@ function toAcronym( input ){
               .join('');
 }
 
+
 //Solution#2
 function toAcronym( input ){
   return input.replace(/(\w).*?\b[^\w]*/g,"$1").toUpperCase()
