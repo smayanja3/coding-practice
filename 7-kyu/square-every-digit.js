@@ -1,35 +1,44 @@
-/*Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+/*You are going to be given a non-empty string. Your job is to return the middle character(s) of the string.
 
-For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
-
-Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36, and 52 is 25. (49-36-25)
-
-Note: The function accepts a non-negative integer and returns an integer.
-
-Happy Coding!*/
+If the string's length is odd, return the middle character.
+If the string's length is even, return the middle 2 characters.
+Examples:
+"test" --> "es"
+"testing" --> "t"
+"middle" --> "dd"
+"A" --> "A"
+*/
 
 //My Solution
-function squareDigits(num){
-  const str = num.toString().split('')
-  const square = str.map((number) => number * number)
-  //console.log(square)
-  return Number(square.join(''))
-  //const mapped = array.map((x) => x * 2);
+function getMiddle(str) {
+  //Code goes here!
+  const middle = Math.floor(str.length / 2) //rounds up 
   
-  //return str;
+  //If length is even, return 2 characters.
+  if(str.length % 2 === 0){
+    return str[middle -1] + str[middle] 
+    //because math.floor rounds up i have to take that out and then add middle again
+    //If odd, return 1 character.
+  }
+    return str[middle];
 }
-//string to array
-//square each by using map
-// string join()
-// return square
 
-
+//cut string in half using Math.floor()rounds down
 
 //Different Solution
 
 //Solution#1
-function squareDigits(num){
-  return +num.toString().split('').map(i => i*i).join('');
+function getMiddle(s)
+{
+  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
 }
+
 //Solution#2
-const squareDigits = (num) => Number((num + '').split("").map(c => c *c).join(""));
+function getMiddle(string) {
+  var middleIndex = string.length / 2;
+  if (string.length % 2 == 0) {
+    return string.slice(middleIndex - 1, middleIndex + 1);
+  } else {
+    return string.charAt(middleIndex);
+  }
+}
