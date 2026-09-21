@@ -22,9 +22,9 @@ const areaOrPerimeter = function(l, w) {
 //Different Solution
 
 //Solution#1
-const areaOrPerimeter = (l , w) => l === w ? l*w : 2*(l+w);
+const areaOPerimeter = (l , w) => l === w ? l*w : 2*(l+w);
 
 //Solution#2
-const areaOrPerimeter = function(l , w) {
+const areaOrP = function(l , w) {
   return l == w ? l*w : 2*(l + w)
 };
