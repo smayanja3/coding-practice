@@ -1,4 +1,3 @@
-cat > README.md << 'EOF'
 # Coding Practice
 
 My daily problem-solving practice, organized by platform. I use this repo to build my skills in JavaScript, data structures, and algorithms.
@@ -29,19 +28,8 @@ Interview-style problems sorted by difficulty.
 ### [NeetCode](./NEETCODE)
 Problems from the NeetCode roadmap, grouped by topic.
 
-## Language
-
-Mostly JavaScript, with more languages to come.
-
 ## Goals
 
 - Practice a little every day
 - Get comfortable with arrays, strings, hash maps, and two pointers
 - Work up through the ranks on each platform
-
-## Profiles
-
-- Codewars: add your profile link here
-- LeetCode: add your profile link here
-- NeetCode: add your profile link here
-EOF
